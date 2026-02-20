@@ -17,5 +17,4 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: "/review"
-          claude_args: "--max-turns 5"
-          allowed_tools: "Bash,Read,Glob,Grep,WebFetch"
+          claude_args: "--max-turns 15"
