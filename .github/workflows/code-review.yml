@@ -21,11 +21,5 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ github.token }}
           prompt: "/review"
-          claude_args: "--max-turns 15"
+          claude_args: "--max-turns 15 --allowedTools Bash,Read,Glob,Grep"
           show_full_output: true
-          settings: |
-            {
-              "permissions": {
-                "allow": ["Bash", "Read", "Glob", "Grep"]
-              }
-            }
