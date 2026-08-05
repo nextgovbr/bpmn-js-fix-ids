@@ -14,4 +14,6 @@ on:
 jobs:
   review:
     uses: nextgovbr/workflows/.github/workflows/code-review.yml@v1
-    secrets: inherit
+    # Passa SO o secret que o workflow central usa.
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
